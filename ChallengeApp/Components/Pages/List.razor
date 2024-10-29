@@ -1,0 +1,50 @@
+@page "/list"
+@code {
+    [Parameter]
+    public EventCallback<int> OnOptionSelected { get; set; }
+
+    private int selectedOption = 1;
+
+    private void SelectOption(int option)
+    {
+        selectedOption = option;
+        OnOptionSelected.InvokeAsync(option);
+    }
+}
+
+<div class="sidebar">
+    @for (int i = 1; i <= 12; i++)
+    {
+        <div class="sidebar-item @(selectedOption == i ? "selected" : "")"
+             @onclick="() => SelectOption(i)">
+            Opção @i
+            <span class="status-icon">@((selectedOption >= i) ? "✔️" : "⏳")</span>
+        </div>
+    }
+</div>
+
+<style>
+    .sidebar {
+        width: 200px;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+
+    .sidebar-item {
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar-item.selected {
+        background-color: #deebee;
+    }
+
+    .status-icon {
+        font-size: 0.8em;
+        color: green;
+    }
+</style>

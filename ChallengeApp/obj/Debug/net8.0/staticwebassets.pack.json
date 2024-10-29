@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChallengeApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ChallengeApp.bundle.scp.css"
+    },
+    {
+      "Id": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ChallengeApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ChallengeApp.props",
+      "PackagePath": "build\\ChallengeApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ChallengeApp.props",
+      "PackagePath": "buildMultiTargeting\\ChallengeApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ChallengeApp.props",
+      "PackagePath": "buildTransitive\\ChallengeApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
