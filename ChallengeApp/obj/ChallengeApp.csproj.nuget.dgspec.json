@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj": {}
+    "d:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj": {
+    "d:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj",
+        "projectUniqueName": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj",
         "projectName": "ChallengeApp",
-        "projectPath": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj",
+        "projectPath": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj",
         "packagesPath": "C:\\Users\\ruben\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\",
+        "outputPath": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ruben\\AppData\\Roaming\\NuGet\\NuGet.Config"

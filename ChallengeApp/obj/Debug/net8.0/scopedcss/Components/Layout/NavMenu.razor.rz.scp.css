@@ -70,7 +70,6 @@
 
 .nav-item[b-lftzuz5ib0] {
     font-size: 0.9rem;
-    padding-bottom: 0.5rem;
     flex: 1; /* Allow items to grow equally */
     text-align: center;
 }
@@ -114,6 +113,21 @@
 
 .navbar-toggler:checked ~ .nav-scrollable[b-lftzuz5ib0] {
     display: block;
+}
+
+.nav .nav-user[b-lftzuz5ib0] {
+    display: inline-block;
+}
+
+.right-side-icons[b-lftzuz5ib0] {
+    display: flex;
+    align-items: center;
+}
+
+/* Redefine */
+.navbar[b-lftzuz5ib0] {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 @media (min-width: 641px) {

@@ -70,7 +70,6 @@
 
 .nav-item {
     font-size: 0.9rem;
-    padding-bottom: 0.5rem;
     flex: 1; /* Allow items to grow equally */
     text-align: center;
 }
@@ -118,6 +117,17 @@
 
 .nav .nav-user {
     display: inline-block;
+}
+
+.right-side-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Redefine */
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 @media (min-width: 641px) {

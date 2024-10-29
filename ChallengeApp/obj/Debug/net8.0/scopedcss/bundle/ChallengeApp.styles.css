@@ -15,7 +15,7 @@ main[b-twa551w9e1] {
 }
 
 .main-content[b-twa551w9e1] {
-    background-color: #d3d3d3;
+    background-color: #e8e8e8;
 }
 
 .navbar[b-twa551w9e1] {
@@ -191,7 +191,6 @@ main[b-twa551w9e1] {
 
 .nav-item[b-lftzuz5ib0] {
     font-size: 0.9rem;
-    padding-bottom: 0.5rem;
     flex: 1; /* Allow items to grow equally */
     text-align: center;
 }
@@ -235,6 +234,21 @@ main[b-twa551w9e1] {
 
 .navbar-toggler:checked ~ .nav-scrollable[b-lftzuz5ib0] {
     display: block;
+}
+
+.nav .nav-user[b-lftzuz5ib0] {
+    display: inline-block;
+}
+
+.right-side-icons[b-lftzuz5ib0] {
+    display: flex;
+    align-items: center;
+}
+
+/* Redefine */
+.navbar[b-lftzuz5ib0] {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 @media (min-width: 641px) {

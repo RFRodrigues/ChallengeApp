@@ -1,0 +1,116 @@
+@page "/controls"
+<div class="novo-aviso-container">
+    <div class="header">
+        <i class="bi bi-arrow-left"></i>
+        <div>
+            <span>avisos</span>
+            <h2>novo aviso</h2>
+        </div>
+        <div>
+            <i class="bi bi-pencil"></i>
+            <span>Em Preenchimento</span>
+        </div>
+    </div>
+    
+    <div class="actions">
+        <button type="button" class="btn validate-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy" viewBox="0 0 16 16">
+                <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H3v5.5A1.5 1.5 0 0 0 4.5 7h7A1.5 1.5 0 0 0 13 5.5V0h.086a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5H14v-5.5A1.5 1.5 0 0 0 12.5 9h-9A1.5 1.5 0 0 0 2 10.5V16h-.5A1.5 1.5 0 0 1 0 14.5z"></path>
+                <path d="M3 16h10v-5.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5zm9-16H4v5.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zM9 1h2v4H9z"></path>
+            </svg>
+            Guardar alterações
+        </button>
+        <button class="btn validate-btn">Validar</button>
+        <button type="button" class="btn validate-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H3v5.5A1.5 1.5 0 0 0 4.5 7h7A1.5 1.5 0 0 0 13 5.5V0h.086a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5H14v-5.5A1.5 1.5 0 0 0 12.5 9h-9A1.5 1.5 0 0 0 2 10.5V16h-.5A1.5 1.5 0 0 1 0 14.5z"></path>
+                <path d="M3 16h10v-5.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5zm9-16H4v5.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zM9 1h2v4H9z"></path>
+            </svg>
+            Publicar
+        </button>
+        
+    </div>
+</div>
+
+@code {
+    // Code-behind logic (if any) goes here
+}
+
+<style>
+    .novo-aviso-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #6d5bcf;
+}
+
+.material-icons {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.status-tag {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6d5bcf;
+    border: 1px solid #6d5bcf;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: transparent;
+    color: #6d5bcf;
+    border: 1px solid #6d5bcf;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.validate-btn {
+    background-color: transparent;
+    color: #6d5bcf;
+    border: 1px solid #6d5bcf;
+}
+
+.publish-btn {
+    background-color: #f0f0f0;
+    color: #aaa;
+    border: 1px solid #dcdcdc;
+    cursor: not-allowed;
+}
+</style>

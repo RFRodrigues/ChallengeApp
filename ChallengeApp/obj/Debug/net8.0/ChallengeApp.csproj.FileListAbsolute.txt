@@ -27,3 +27,4 @@ d:\Projetos\ChallengeApp\ChallengeApp\obj\Debug\net8.0\refint\ChallengeApp.dll
 d:\Projetos\ChallengeApp\ChallengeApp\obj\Debug\net8.0\ChallengeApp.pdb
 d:\Projetos\ChallengeApp\ChallengeApp\obj\Debug\net8.0\ChallengeApp.genruntimeconfig.cache
 d:\Projetos\ChallengeApp\ChallengeApp\obj\Debug\net8.0\ref\ChallengeApp.dll
+d:\Projetos\ChallengeApp\ChallengeApp\obj\Debug\net8.0\ChallengeApp.sourcelink.json
