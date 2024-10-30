@@ -233,7 +233,8 @@ main[b-twa551w9e1] {
 }
 
 .nav .nav-user[b-lftzuz5ib0] {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
 }
 
 .right-side-icons[b-lftzuz5ib0] {
@@ -245,6 +246,11 @@ main[b-twa551w9e1] {
 .navbar[b-lftzuz5ib0] {
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.nav-username[b-lftzuz5ib0] {
+    flex-direction: column;
+    display: flex;
 }
 
 @media (min-width: 641px) {

@@ -2,11 +2,11 @@
 <div class="novo-aviso-container">
     <div class="header">
         <i class="bi bi-arrow-left"></i>
-        <div>
+        <div class="header-title">
             <span>avisos</span>
-            <h2>novo aviso</h2>
+            <h2>NOVO AVISO</h2>
         </div>
-        <div>
+        <div class="header-edit">
             <i class="bi bi-pencil"></i>
             <span>Em Preenchimento</span>
         </div>
@@ -50,6 +50,23 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 16px;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    gap: 0.6rem;
+}
+
+.header-edit {
+    display: flex;
+    align-self: end;
+    color: #6d5bcf;
+}
+
+.header-edit i {
+    margin: 0 0.5rem 0 0;
 }
 
 .back-link {

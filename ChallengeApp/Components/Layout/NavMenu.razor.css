@@ -116,7 +116,8 @@
 }
 
 .nav .nav-user {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
 }
 
 .right-side-icons {
@@ -128,6 +129,11 @@
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.nav-username {
+    flex-direction: column;
+    display: flex;
 }
 
 @media (min-width: 641px) {
