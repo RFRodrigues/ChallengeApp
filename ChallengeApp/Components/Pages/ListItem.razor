@@ -1,0 +1,224 @@
+@page "/listitem"
+<div class="opcao-container">
+    <div class="header">
+        <h1>Opção 10</h1>
+        <p class="mandatory-text">* Campos de preenchimento obrigatório</p>
+        <div class="navigation-buttons">
+            <button class="nav-btn"><span class="material-icons">arrow_back</span> Anterior</button>
+            <button class="nav-btn">Seguinte <span class="material-icons">arrow_forward</span></button>
+        </div>
+    </div>
+    
+    <div class="form-section">
+        <h2>Tipo de taxa</h2>
+        <label>Adicionar tipo de taxa</label>
+        <select class="select-box">
+            <option>Selecionar</option>
+        </select>
+    </div>
+
+    <div class="form-section">
+        <h2>Contar *</h2>
+        <label><input type="radio" name="contar" checked> Sim</label>
+        <label><input type="radio" name="contar"> Não</label>
+    </div>
+
+    <div class="form-section">
+        <h2>Taxa *</h2>
+        <label>Adicionar taxa por localização</label>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <div class="tax-table">
+            <div class="table-row header">
+                <div>NUTS II</div>
+                <div>NUTS III</div>
+                <div>Concelho</div>
+                <div>Taxa (%)</div>
+                <div></div>
+            </div>
+            <div class="table-row">
+                <div><input type="checkbox" checked> Norte</div>
+                <div>Ave</div>
+                <div>Fafe</div>
+                <div>25 %</div>
+                <div><button class="delete-btn">🗑️</button></div>
+            </div>
+            <div class="table-row">
+                <div><input type="checkbox" checked> Norte</div>
+                <div>Área Metropolitana do Porto</div>
+                <div>Matosinhos</div>
+                <div>75 %</div>
+                <div><button class="delete-btn">🗑️</button></div>
+            </div>
+        </div>
+        <button class="add-tax-btn">+ Adicionar Taxa</button>
+    </div>
+</div>
+
+@code {
+    // Code-behind logic (if any) can be added here
+}
+
+<style>
+    .opcao-container {
+    background-color: #f9f9fb;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 3rem auto;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.mandatory-text {
+    color: #6d5bcf;
+    font-size: 14px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-btn {
+    background-color: #6d5bcf;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-section {
+    background-color: white;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.select-box {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #6d5bcf;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 8px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #6d5bcf;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.tax-table {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-top: 1px solid #eee;
+}
+
+.table-row.header {
+    font-weight: 600;
+    color: #333;
+}
+
+.table-row div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: #6d5bcf;
+    border: none;
+    cursor: pointer;
+}
+
+.add-tax-btn {
+    background-color: transparent;
+    color: #6d5bcf;
+    border: 1px solid #6d5bcf;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+</style>
