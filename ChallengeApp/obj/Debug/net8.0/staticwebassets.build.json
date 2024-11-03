@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "efKuEiQOm4V9O6TGNR46WCylUsRROQJamYLQI1vJoFA=",
+  "Hash": "ftYjzTWEO9yejTcWK/clAhRZqbDTgDZXGltd5Miw+dg=",
   "Source": "ChallengeApp",
   "BasePath": "_content/ChallengeApp",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "ChallengeApp\\wwwroot",
+      "Name": "ChallengeApp/wwwroot",
       "Source": "ChallengeApp",
-      "ContentRoot": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\",
+      "ContentRoot": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/",
       "BasePath": "_content/ChallengeApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChallengeApp.styles.css",
+      "Identity": "/Users/ruben/ChallengeApp/ChallengeApp/obj/Debug/net8.0/scopedcss/bundle/ChallengeApp.styles.css",
       "SourceId": "ChallengeApp",
       "SourceType": "Computed",
-      "ContentRoot": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/Users/ruben/ChallengeApp/ChallengeApp/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/ChallengeApp",
       "RelativePath": "ChallengeApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChallengeApp.styles.css"
+      "OriginalItemSpec": "/Users/ruben/ChallengeApp/ChallengeApp/obj/Debug/net8.0/scopedcss/bundle/ChallengeApp.styles.css"
     },
     {
-      "Identity": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChallengeApp.bundle.scp.css",
+      "Identity": "/Users/ruben/ChallengeApp/ChallengeApp/obj/Debug/net8.0/scopedcss/projectbundle/ChallengeApp.bundle.scp.css",
       "SourceId": "ChallengeApp",
       "SourceType": "Computed",
-      "ContentRoot": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/Users/ruben/ChallengeApp/ChallengeApp/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/ChallengeApp",
       "RelativePath": "ChallengeApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChallengeApp.bundle.scp.css"
+      "OriginalItemSpec": "/Users/ruben/ChallengeApp/ChallengeApp/obj/Debug/net8.0/scopedcss/projectbundle/ChallengeApp.bundle.scp.css"
     },
     {
-      "Identity": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\app.css",
+      "Identity": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/app.css",
       "SourceId": "ChallengeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\",
+      "ContentRoot": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/",
       "BasePath": "_content/ChallengeApp",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
+      "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "ChallengeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\",
+      "ContentRoot": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/",
       "BasePath": "_content/ChallengeApp",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "ChallengeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\",
+      "ContentRoot": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/",
       "BasePath": "_content/ChallengeApp",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -109,13 +109,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\favicon.png",
+      "Identity": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/favicon.png",
       "SourceId": "ChallengeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\",
+      "ContentRoot": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/",
       "BasePath": "_content/ChallengeApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -128,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.png"
     }
   ]
 }

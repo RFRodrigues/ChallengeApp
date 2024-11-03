@@ -19,7 +19,7 @@ main {
 
 .navbar {
     width: 100%; /* Full width */
-    background-color: #0e549a; /* Background color for navbar */
+    background-color: #6d5bcf; /* Background color for navbar */
     display: block; /* Ensure it's a block element */
     position: relative; /* Keeps it at the top */
 }

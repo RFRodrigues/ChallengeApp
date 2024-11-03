@@ -1,4 +1,6 @@
 @page "/listitem"
+@using ChallengeApp.Models
+
 <div class="opcao-container">
     <div class="header">
         <div>
@@ -23,10 +25,9 @@
                     </svg>
                 </button>
             </div>
-            
         </div>
     </div>
-    
+
     <div class="form-section">
         <h2>Tipo de taxa</h2>
         <label>Adicionar tipo de taxa</label>
@@ -51,49 +52,105 @@
                 <input type="checkbox" checked>
                 <span class="slider"></span>
             </label>
-            <button class="add-tax-btn">+ Adicionar Taxa</button>
+            <button class="btn custom-btn ml-auto">+ Adicionar Taxa</button>
         </div>
+
         <div class="tax-table">
             <div class="table-row header">
-                <div><input type="checkbox" checked></div>
+                <div><input type="checkbox" @onchange="ToggleSelectAll" /></div>
                 <div>NUTS II</div>
                 <div>NUTS III</div>
                 <div>Concelho</div>
                 <div>Taxa (%)</div>
                 <div></div>
             </div>
-            <div class="table-row">
-                <div><input type="checkbox" checked></div>
-                <div>Norte</div>
-                <div>Ave</div>
-                <div>Fafe</div>
-                <div>25 %</div>
-                <div><button class="delete-btn">🗑️</button></div>
-            </div>
-            <div class="table-row">
-                <div><input type="checkbox" checked></div>
-                <div>Norte</div>
-                <div>Área Metropolitana do Porto</div>
-                <div>Matosinhos</div>
-                <div>75 %</div>
-                <div><button class="delete-btn">🗑️</button></div>
-            </div>
+
+            @foreach (var row in taxRows)
+            {
+                <div class="table-row">
+                    <div><input type="checkbox" @bind="row.IsSelected" /></div>
+                    <div>@row.Region</div>
+                    <div>@row.SubRegion</div>
+                    <div>@row.City</div>
+                    <div>@row.Rate %</div>
+                    <div><button class="delete-btn" @onclick="() => RemoveRow(row)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                        </svg>
+                    </button></div>
+                </div>
+            }
         </div>
-        
+
+        @if (IsAnyRowSelected)
+        {
+            <div class="actions">
+                <button class="delete-selected-btn" @onclick="DeleteSelected">Delete Selected</button>
+                <button class="cancel-btn" @onclick="CancelSelection">Cancel</button>
+            </div>
+        }
     </div>
 </div>
 
 @code {
-    // Code-behind logic (if any) can be added here
+    private bool selectAll = false;
+    private List<TaxRow> taxRows = new List<TaxRow>
+    {
+        new TaxRow { Id = 1, Region = "Norte", SubRegion = "Ave", City = "Fafe", Rate = 25, IsSelected = false },
+        new TaxRow { Id = 2, Region = "Norte", SubRegion = "Área Metropolitana do Porto", City = "Matosinhos", Rate = 75, IsSelected = false }
+    };
+
+    private void ToggleSelectAll(ChangeEventArgs e)
+    {
+        selectAll = !selectAll;
+        // Update each row's IsSelected property based on selectAll value
+        foreach (var row in taxRows)
+        {
+            row.IsSelected = selectAll;
+        }
+        StateHasChanged(); // Refresh the UI
+    }
+
+    private void RemoveRow(TaxRow row)
+    {
+        taxRows.Remove(row);
+        StateHasChanged(); // Ensure UI refresh after row deletion
+    }
+
+    private void DeleteSelected()
+    {
+        taxRows = taxRows.Where(row => !row.IsSelected).ToList();
+        selectAll = false; // Reset "Select All" checkbox
+        StateHasChanged(); // Refresh the UI after deletion
+    }
+
+    private void CancelSelection()
+    {
+        selectAll = false;
+        foreach (var row in taxRows)
+        {
+            row.IsSelected = false;
+        }
+        StateHasChanged(); // Refresh the UI after canceling selection
+    }
+
+    private bool IsAnyRowSelected => taxRows.Any(row => row.IsSelected);
 }
 
 <style>
 .opcao-container {
-    background-color: #e8e8e8;
-    margin: 3rem;
+    margin: 1rem 3rem;
     font-family: Arial, sans-serif;
-    width: 100%;
     flex: 8;
+}
+
+@@media (min-width: 992px) {
+    .opcao-container {
+        margin: 3rem;
+        font-family: Arial, sans-serif;
+        flex: 8;
+    }
 }
 
 .header {
@@ -141,13 +198,14 @@
     padding: 16px;
     margin-top: 16px;
     border-radius: 8px;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 10%);
 }
 
 .form-section h2 {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 8px;
+    color: #777777;
 }
 
 .select-box {
@@ -159,6 +217,11 @@
 
 .tax-control {
     display: flex;
+}
+
+@* align left *@
+.tax-control button {
+    margin-left: auto;
 }
 
 .radio-labels {
@@ -183,8 +246,7 @@ input[type="radio"] {
     display: inline-block;
     width: 40px;
     height: 20px;
-    margin-left: 8px;
-    margin-top: 1rem;
+    margin: 0.4rem 0 0 0.5rem;
 }
 
 .switch input {
@@ -265,21 +327,20 @@ input:checked + .slider:before {
 }
 
 .delete-btn {
-    background-color: transparent;
+    background-color: #fff;
     color: #6d5bcf;
-    border: none;
-    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #c5c5c5;
+    border-radius: 0.2rem;
+    transition: 0.3ms;
 }
 
-.add-tax-btn {
-    background-color: transparent;
-    color: #6d5bcf;
-    border: 1px solid #6d5bcf;
-    padding: 8px 16px;
-    border-radius: 4px;
+.delete-btn:hover {
+    background-color: #6d5bcf;
+    color: #fff;
     cursor: pointer;
-    margin: 0.5rem;
-    margin-left: auto;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #6d5bcf;
 }
 
 input[type="checkbox"] {

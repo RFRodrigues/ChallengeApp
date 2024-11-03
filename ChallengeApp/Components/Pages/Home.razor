@@ -20,6 +20,14 @@
 <style>
 .inner-content {
     display: flex;
+    flex-direction: column;
+}
+
+@@media (min-width: 992px) {
+    .inner-content {
+        display: flex;
+        flex-direction: row;
+    }
 }
 </style>
 

@@ -13,55 +13,87 @@
 }
 
 <div class="sidebar">
-    @for (int i = 1; i <= 12; i++)
-    {
-        <div class="sidebar-item @(selectedOption == i ? "selected" : "")"
-             @onclick="() => SelectOption(i)">
-            Opção @i
-            <span class="status-icon">
-                @if (selectedOption >= i)
-                {
-                    @* Checked icon *@
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#198754" class="bi bi-check-circle" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-                    </svg>
-                }
-                else
-                {
-                    @* Placeholder for an unchecked (clock) icon example *@
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#d3d3d3" class="bi bi-clock" viewBox="0 0 16 16">
-                        <path d="M8 3.5a.5.5 0 0 1 .5.5v4l3 1.5a.5.5 0 0 1-.5.866l-3.5-1.75A.5.5 0 0 1 7.5 8V4a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0z"/>
-                    </svg>
-                }
-            </span>
-        </div>
-    }
+    <div class="sidebar-inner">
+        @for (int i = 1; i <= 12; i++)
+        {
+            <div class="sidebar-item @(selectedOption == i ? "selected" : "")"
+                @onclick="() => SelectOption(i)">
+                <span class="list-label">Opção @i</span>
+                <span class="status-icon">
+                    @if (selectedOption >= i)
+                    {
+                        @* Checked icon *@
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#198754" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                        </svg>
+                    }
+                    else
+                    {
+                        @* clock icon *@
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#d3d3d3" class="bi bi-clock" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 1 .5.5v4l3 1.5a.5.5 0 0 1-.5.866l-3.5-1.75A.5.5 0 0 1 7.5 8V4a.5.5 0 0 1 .5-.5z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0z"/>
+                        </svg>
+                    }
+                </span>
+            </div>
+        }
+    </div>
 </div>
 
 <style>
+
+.sidebar {
+        background-color: #ffffff;
+    padding: 1rem;
+    margin: 0 3rem;
+    border-radius: 0.3rem;
+    flex: 2;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 10%);
+}
+
+.sidebar-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar-item:hover {
+    background-color: #f6fdff;
+    cursor: pointer;
+    transition: 0.3ms;
+}
+
+.list-label {
+    width: max-content;
+}
+
+.sidebar-inner {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+@@media (min-width: 992px) {
     .sidebar {
         width: 200px;
         background-color: #ffffff;
         padding: 1rem;
         margin: 3rem 1rem 3rem 3rem;
         border-radius: 0.3rem;
-        box-shadow: #b3b3b3 -2px 1px 10px;
         flex: 2;
+        box-shadow: 0px 0px 8px rgb(0 0 0 / 10%);
+        flex-direction: column;
     }
 
     .sidebar-item {
         padding: 10px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-    }
-
-    .sidebar-item:hover {
-        background-color: #f6fdff;
-        cursor: pointer;
-        transition: 0.3ms;
+        flex-direction: row;
     }
 
     .sidebar-item.selected {
@@ -69,8 +101,15 @@
         border-left: solid 1px #6d5bcf;
     }
 
+    .sidebar-inner {
+        display: flex;
+        flex-direction: column;
+        overflow-x: scroll;
+    }   
+
     .status-icon {
         font-size: 0.8em;
         color: green;
     }
+}
 </style>
