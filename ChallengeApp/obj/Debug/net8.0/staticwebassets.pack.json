@@ -1,39 +1,39 @@
 {
   "Files": [
     {
-      "Id": "/Users/ruben/ChallengeApp/ChallengeApp/obj/Debug/net8.0/scopedcss/projectbundle/ChallengeApp.bundle.scp.css",
-      "PackagePath": "staticwebassets/ChallengeApp.bundle.scp.css"
+      "Id": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChallengeApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ChallengeApp.bundle.scp.css"
     },
     {
-      "Id": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/app.css",
-      "PackagePath": "staticwebassets/app.css"
+      "Id": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/bootstrap/bootstrap.min.css",
-      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+      "Id": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/bootstrap/bootstrap.min.css.map",
-      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+      "Id": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/ruben/ChallengeApp/ChallengeApp/wwwroot/favicon.png",
-      "PackagePath": "staticwebassets/favicon.png"
+      "Id": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ChallengeApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ChallengeApp.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ChallengeApp.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ChallengeApp.props",
       "PackagePath": "build\\ChallengeApp.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ChallengeApp.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ChallengeApp.props",
       "PackagePath": "buildMultiTargeting\\ChallengeApp.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ChallengeApp.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ChallengeApp.props",
       "PackagePath": "buildTransitive\\ChallengeApp.props"
     }
   ],

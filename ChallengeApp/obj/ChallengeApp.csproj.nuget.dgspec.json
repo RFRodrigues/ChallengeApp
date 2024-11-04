@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ruben/ChallengeApp/ChallengeApp/ChallengeApp.csproj": {}
+    "D:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj": {}
   },
   "projects": {
-    "/Users/ruben/ChallengeApp/ChallengeApp/ChallengeApp.csproj": {
+    "D:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ruben/ChallengeApp/ChallengeApp/ChallengeApp.csproj",
+        "projectUniqueName": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj",
         "projectName": "ChallengeApp",
-        "projectPath": "/Users/ruben/ChallengeApp/ChallengeApp/ChallengeApp.csproj",
-        "packagesPath": "/Users/ruben/.nuget/packages/",
-        "outputPath": "/Users/ruben/ChallengeApp/ChallengeApp/obj/",
+        "projectPath": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\ChallengeApp.csproj",
+        "packagesPath": "C:\\Users\\ruben\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\ChallengeApp\\ChallengeApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ruben/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ruben\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

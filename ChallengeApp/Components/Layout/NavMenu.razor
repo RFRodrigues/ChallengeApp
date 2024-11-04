@@ -1,12 +1,22 @@
-﻿<div class="nav-scrollable">
-    <nav class="navbar navbar-expand-lg navbar-light">
+﻿@code {
+    private bool isDropdownOpen = false;
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-            <!-- Navbar toggle icon (hamburger) -->
+    private void ToggleDropdown()
+    {
+        isDropdownOpen = !isDropdownOpen;
+    }
+}
+
+<div class="nav-scrollable">
+    <nav class="navbar navbar-expand-lg navbar-light position-relative">
+        
+        <!-- Toggler button -->
+        <button class="navbar-toggler" type="button" @onclick="ToggleDropdown">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse flex-row" id="navbarSupportedContent">
-            <!-- Left-aligned nav items -->
+        <!-- Dropdown Menu that appears below the toggler -->
+        <div class="collapse navbar-collapse nav-dropdown" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home</a>
@@ -21,23 +31,24 @@
                     <a class="nav-link" href="#">Candidaturas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Operacões</a>
+                    <a class="nav-link" href="#">Operações</a>
                 </li>
             </ul>
+        </div>
 
-            <!-- Right-aligned icons and user info -->
-            <div class="right-side-icons ml-auto">
-                <i class="bi bi-search white-icon"></i>
-                <i class="bi bi-inbox white-icon"></i>
-                <i class="bi bi-gear white-icon"></i>
-                <div class="ml-3 nav-user">
-                    <img src="https://via.placeholder.com/30" alt="User" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 8px;">
-                    <div class="nav-username">
-                        <span class="nav-name">Erik Frings</span>
-                        <span class="nav-sub">Perfil 1 - Entidade 0</span>
-                    </div>
+        <!-- Right-aligned icons and user info -->
+        <div class="right-side-icons ml-auto d-flex align-items-center">
+            <i class="bi bi-search white-icon mr-3"></i>
+            <i class="bi bi-inbox white-icon mr-3"></i>
+            <i class="bi bi-gear white-icon mr-3"></i>
+            <div class="ml-3 nav-user d-flex align-items-center">
+                <img src="https://via.placeholder.com/30" alt="User" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 8px;">
+                <div class="nav-username">
+                    <span class="nav-name">Erik Frings</span>
+                    <span class="nav-sub">Perfil 1 - Entidade 0</span>
                 </div>
             </div>
         </div>
     </nav>
 </div>
+

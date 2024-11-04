@@ -1,7 +1,7 @@
 @page "/listitem"
 @using ChallengeApp.Models
 
-<div class="opcao-container">
+<div class="item-container">
     <div class="header">
         <div>
             <h1>Opção 10</h1>
@@ -83,6 +83,24 @@
             }
         </div>
 
+        <div class="pagination-container">
+            <span>1 de 2 páginas (23 itens)</span>
+            <select class="items-per-page">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+            <span>itens por página</span>
+
+            <!-- Pagination Buttons -->
+            <div class="pagination-buttons">
+                <button class="pagination-btn">&laquo;</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">&raquo;</button>
+            </div>
+        </div>
+
         @if (IsAnyRowSelected)
         {
             <div class="actions">
@@ -139,14 +157,14 @@
 }
 
 <style>
-.opcao-container {
+.item-container {
     margin: 1rem 3rem;
     font-family: Arial, sans-serif;
     flex: 8;
 }
 
 @@media (min-width: 992px) {
-    .opcao-container {
+    .item-container {
         margin: 3rem;
         font-family: Arial, sans-serif;
         flex: 8;
@@ -217,11 +235,20 @@
 
 .tax-control {
     display: flex;
+    flex-direction: column;
 }
 
-@* align left *@
-.tax-control button {
-    margin-left: auto;
+@@media (min-width: 540px) {
+    .tax-control {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@@media (min-width: 540px) {
+    .tax-control button {
+        margin-left: auto;
+    }
 }
 
 .radio-labels {
@@ -246,7 +273,13 @@ input[type="radio"] {
     display: inline-block;
     width: 40px;
     height: 20px;
-    margin: 0.4rem 0 0 0.5rem;
+    margin: 0rem 0 1rem 0.5rem;
+}
+
+@@media (min-width: 540px) {
+    .switch {
+        margin: 0.4rem 0 0 0.5rem;
+    }
 }
 
 .switch input {
@@ -288,8 +321,8 @@ input:checked + .slider:before {
 }
 
 .tax-table {
-    margin-top: 16px;
     width: 100%;
+    margin: 1rem 0;
 }
 
 .table-row {
@@ -320,6 +353,7 @@ input:checked + .slider:before {
     align-items: center;
     font-size: 14px;
     margin: 0 0.5rem;
+    word-break: break-word;
 }
 
 .table-row div:last-child {
@@ -346,6 +380,43 @@ input:checked + .slider:before {
 input[type="checkbox"] {
     transform: scale(1.5);
     accent-color: #6d5bcf;
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.items-per-page {
+    font-size: 14px;
+    padding: 4px;
+    margin: 0 8px;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-btn {
+    border: none;
+    background-color: transparent;
+    color: #666;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination-btn.active {
+    color: #6200ea;
+    font-weight: bold;
+}
+
+.pagination-btn:hover {
+    color: #6200ea;
 }
 
 </style>
